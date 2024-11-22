@@ -8,5 +8,5 @@ app.use(cors());
 // Routes
 app.use("/api", productRoutes);
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000; // Use Heroku's assigned port or default to 5000 locally
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
